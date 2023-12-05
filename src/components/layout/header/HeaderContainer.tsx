@@ -10,6 +10,7 @@ const HeaderContainer = () => {
     {link: '#', title: 'COMMUNITY'},
     {link: '#', title: 'WALLPAPER'}
   ];
+
   return(
     <HeaderView menu={menu}/>
   )

@@ -1,0 +1,10 @@
+.Contents {
+  // padding-top: 8rem;
+}
+
+.Logo {
+  a {
+    @include flex(center, center);
+    width: 100%;
+  }
+}

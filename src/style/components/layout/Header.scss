@@ -1,0 +1,21 @@
+.Header {
+  $Header: &;
+
+  width: 100%;
+  // height: 8rem;
+  background: $white;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+
+  &__top {
+    @include flex(center, stretch);
+    width: 100%;
+    height: 8rem;
+    border-bottom: 0.1rem solid $border01;
+
+    .Logo a {
+      height: 100%;
+    }
+  }
+}
