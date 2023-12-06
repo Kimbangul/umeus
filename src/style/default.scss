@@ -34,7 +34,7 @@ body {
   min-width: 280px;
   color: $text05;
   font-size: 1.6rem;
-  //  font-family: 'Noto Sans KR', 'Malgun Gothic', 'sans-serif';
+  @include Tmoney;
   position: relative;
   letter-spacing: -0.05rem;
 }

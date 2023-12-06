@@ -1,5 +1,13 @@
-@mixin Russo {
-  font-family: 'Russo', 'Noto Sans KR', sans-serif;
+@mixin Comfortaa {
+  font-family: 'Comfortaa', 'Noto Sans KR', sans-serif;
+}
+
+@mixin Tmoney {
+  font-family: 'TmoneyRoundWindExtraBold', 'Noto Sans KR', sans-serif;
+}
+
+@mixin Nps {
+  font-family: 'NPSfontBold', 'Noto Sans KR', sans-serif;
 }
 
 @mixin flex($jc: flex-start, $ai: stretch, $gap: 0, $dir: row) {
