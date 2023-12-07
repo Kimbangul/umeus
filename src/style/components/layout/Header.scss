@@ -8,6 +8,22 @@
   // position: fixed;
   // top: 0;
   // left: 0;
+  top: -15rem;
+  transition: top 0.3s;
+
+  &[data-fix='true'] {
+    position: sticky;
+    top: -8rem;
+    left: 0;
+    z-index: 99;
+
+    #{$Header}__inner {
+      .Logo a {
+        transform: translateX(0);
+        transition: transform 0.5s 0.3s;
+      }
+    }
+  }
 
   &__top {
     @include flex(center, stretch);
@@ -23,12 +39,17 @@
   &__inner {
     @include max-width-container;
     @include flex(space-between, center);
+    height: 7rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+    position: sticky;
+    top: 0;
+    left: 0;
 
     .Logo {
       overflow: hidden;
       a {
+        transition: transform 0.3s;
         transform: translateX(-100%);
       }
     }

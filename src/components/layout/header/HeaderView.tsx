@@ -1,14 +1,14 @@
 import { HeaderPropType } from "@/components/layout/header/type";
 import Logo from "@/components/common/Logo";
 
-const HeaderView : React.FC<HeaderPropType> = ({menu}) => {
+const HeaderView : React.FC<HeaderPropType> = ({menu, isFix}) => {
   return(
-    <header className="Header">
+    <header className="Header" data-fix={isFix}>
       <h1 className="sound-only">해피윰스데이</h1>  
       <div className="Header__top">
         <Logo />
       </div>
-      <div className="Header__inner">
+      <div className={`Header__inner`} >
         <div className="Header__logo">
         <Logo />
         </div>

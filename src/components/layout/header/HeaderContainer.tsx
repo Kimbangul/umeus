@@ -1,10 +1,22 @@
+'use client'
+
 import HeaderView from "@/components/layout/header/HeaderView"
 import { MenuType } from "@/components/layout/header/type";
-import { useRef } from "react";
-import useInterSectionObserver from "@/hooks/useInterSectionObserver";
+import { useEffect, useRef, useState } from "react";
+import useScroll from "@/hooks/useScroll";
 
 const HeaderContainer = () => {
-  const headerRef = useRef();
+  const scroll = useScroll();
+  const [isFix, setIsFix] = useState(false);
+
+  useEffect(()=>{
+    if (scroll.scroll >= 150){
+      setIsFix(true);
+    } else{
+      console.log(scroll.scroll);
+      setIsFix(false);
+    }    
+  },[scroll.scroll])
 
   const menu : MenuType[] = [
     {link: '#', title: 'ABOUT'},
@@ -16,7 +28,7 @@ const HeaderContainer = () => {
   ];
 
   return(
-    <HeaderView menu={menu}/>
+    <HeaderView menu={menu} isFix={isFix}/>
   )
 }
 
