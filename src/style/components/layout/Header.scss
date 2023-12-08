@@ -1,7 +1,7 @@
 .Header {
   $Header: &;
   border-bottom: 0.1rem solid $border01;
-
+  overflow: hidden;
   width: 100%;
   // height: 8rem;
   background: $white;
@@ -60,6 +60,13 @@
         }
       }
     }
+    @media (max-width: $pc-xs) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    @media (max-width: $mb-lg) {
+      height: 5rem;
+    }
   }
 
   &__menu {
@@ -88,6 +95,7 @@
       cursor: pointer;
       font-size: 2.4rem;
       color: $second;
+      transform: (translateX(50%));
       @media (max-width: $pc-xs) {
         display: block;
       }

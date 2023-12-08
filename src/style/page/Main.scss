@@ -1,0 +1,12 @@
+.Main {
+  &__best {
+    &-list {
+      @include flex(flex-start, center, 1.6rem);
+    }
+    &-img {
+      width: 40rem;
+      aspect-ratio: 1/1;
+      border: 0.1rem solid $border01;
+    }
+  }
+}
