@@ -1,5 +1,10 @@
 import { HeaderPropType } from "@/components/layout/header/type";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "@/components/common/Logo";
+import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+
 
 const HeaderView : React.FC<HeaderPropType> = ({menu, isFix}) => {
   return(
@@ -23,23 +28,23 @@ const HeaderView : React.FC<HeaderPropType> = ({menu, isFix}) => {
             }
           </ul>
        </nav>
-       <ul className="Header__mymenu">
+       <ul className="Header__mymenu">          
           <li className="Header__mymenu-item">
-            <a href="#">Login</a>
+            <a href="#"><FontAwesomeIcon icon={faSearch}/></a>
           </li>
           <li className="Header__mymenu-item">
-            <a href="#">Join</a>
+            <a href="#"><FontAwesomeIcon icon={faHeart}/></a>
           </li>
           <li className="Header__mymenu-item">
-            <a href="#">search</a>
+            <a href="#"><FontAwesomeIcon icon={faCartShopping}/></a>
           </li>
           <li className="Header__mymenu-item">
-            <a href="#">like</a>
-          </li>
-          <li className="Header__mymenu-item">
-            <a href="#">cart</a>
+            <a href="#">LOGIN</a>
           </li>
        </ul>
+       <button className="Header__menu-btn">
+        <FontAwesomeIcon icon={faBars}/>
+       </button>
       </div>
     </header>
   )

@@ -34,6 +34,9 @@
     .Logo a {
       height: 100%;
     }
+    @media (max-width: $pc-xs) {
+      display: none;
+    }
   }
 
   &__inner {
@@ -51,6 +54,10 @@
       a {
         transition: transform 0.3s;
         transform: translateX(-100%);
+
+        @media (max-width: $pc-xs) {
+          transform: translateX(0);
+        }
       }
     }
   }
@@ -71,9 +78,31 @@
         }
       }
     }
+
+    &-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      height: 100%;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      font-size: 2.4rem;
+      color: $second;
+      @media (max-width: $pc-xs) {
+        display: block;
+      }
+    }
+
+    @media (max-width: $pc-xs) {
+      display: none;
+    }
   }
 
   &__mymenu {
-    @include flex();
+    @include flex(flex-start, center, 1.2rem);
+
+    @media (max-width: $pc-xs) {
+      display: none;
+    }
   }
 }
