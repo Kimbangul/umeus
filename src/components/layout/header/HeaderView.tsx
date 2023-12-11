@@ -6,7 +6,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 
 
-const HeaderView : React.FC<HeaderPropType> = ({menu, isFix}) => {
+const HeaderView : React.FC<HeaderPropType> = ({menu, isFix, isOpen}) => {
   return(
     <header className="Header" data-fix={isFix}>
       <h1 className="sound-only">해피윰스데이</h1>  
@@ -17,7 +17,7 @@ const HeaderView : React.FC<HeaderPropType> = ({menu, isFix}) => {
         <div className="Header__logo">
         <Logo />
         </div>
-       <nav className="Header__menu">
+       <nav className="Header__menu" data-open={isOpen}>
           <ul className="Header__menu-list">
             {
               menu.map((el,idx) => 

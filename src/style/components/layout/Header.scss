@@ -1,7 +1,7 @@
 .Header {
   $Header: &;
   border-bottom: 0.1rem solid $border01;
-  overflow: hidden;
+  //overflow: hidden;
   width: 100%;
   background: $white;
   position: relative;
@@ -9,6 +9,13 @@
   z-index: 99;
   transform: translateY(0);
   transition: transform 0.3s;
+
+  @media (max-width: $pc-xs) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: none;
+  }
 
   &[data-fix='true'] {
     @keyframes headerDown {
@@ -23,6 +30,12 @@
     animation: headerDown 0.3s both;
     left: 0;
     z-index: 99;
+    @media (max-width: $pc-xs) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      animation: none;
+    }
 
     #{$Header}__inner {
       .Logo a {
@@ -120,13 +133,19 @@
 
     @media (max-width: $pc-xs) {
       //display: none;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      top: 0;
-      left: 0;
-      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      &[data-open] {
+        visibility: visible;
+        opacity: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        z-index: 9999;
+      }
     }
   }
 

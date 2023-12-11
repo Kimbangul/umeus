@@ -2,12 +2,15 @@
 
 import HeaderView from "@/components/layout/header/HeaderView"
 import { MenuType } from "@/components/layout/header/type";
-import { useEffect, useRef, useState } from "react";
+import { useEffect,  useState } from "react";
+import useResize from "@/hooks/useResize";
 import useScroll from "@/hooks/useScroll";
 
 const HeaderContainer = () => {
   const scroll = useScroll();
   const [isFix, setIsFix] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const size = useResize();
 
   useEffect(()=>{
     if (scroll.scroll >= 80){
@@ -28,7 +31,7 @@ const HeaderContainer = () => {
   ];
 
   return(
-    <HeaderView menu={menu} isFix={isFix}/>
+    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen}/>
   )
 }
 
