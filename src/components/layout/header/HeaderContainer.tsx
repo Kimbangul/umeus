@@ -10,7 +10,7 @@ const HeaderContainer = () => {
   const [isFix, setIsFix] = useState(false);
 
   useEffect(()=>{
-    if (scroll.scroll >= 150){
+    if (scroll.scroll >= 80){
       setIsFix(true);
     } else{
       console.log(scroll.scroll);

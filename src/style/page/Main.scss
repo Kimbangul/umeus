@@ -10,12 +10,25 @@
   }
   &__best {
     &-list {
-      @include flex(flex-start, center, 1.6rem);
+      @include flex(flex-start, center, 2.4rem);
+    }
+    &-item {
+      flex-basis: 33.3%;
     }
     &-img {
-      width: 40rem;
       aspect-ratio: 1/1;
       border: 0.1rem solid $border01;
+      border-radius: 1.6rem;
+    }
+    &-title {
+      @include Comfortaa;
+      font-weight: 600;
+      margin-top: 1.2rem;
+      font-size: 1.6rem;
+    }
+    &-price {
+      @include Comfortaa;
+      font-size: 1.4rem;
     }
   }
 }
