@@ -1,4 +1,13 @@
 .Main {
+  &__section {
+    @include section;
+  }
+  &__title {
+    @include section-title;
+  }
+  &__inner {
+    @include section-inner;
+  }
   &__best {
     &-list {
       @include flex(flex-start, center, 1.6rem);
