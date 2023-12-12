@@ -4,6 +4,9 @@ export interface HeaderPropType {
   isOpen?: boolean;
   onClickMenu?: ()=>void;
 }
+export interface HeaderMenuPropType{
+  menu: MenuType[];
+}
 
 export interface MenuType {
   link: string,

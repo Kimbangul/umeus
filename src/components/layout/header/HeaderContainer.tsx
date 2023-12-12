@@ -31,7 +31,7 @@ const HeaderContainer = () => {
   ];
 
   return(
-    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen}/>
+    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen} onClickMenu={()=>setIsOpen(true)} onClickClose={()=>setIsOpen(false)}/>
   )
 }
 
