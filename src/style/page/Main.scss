@@ -8,16 +8,21 @@
   &__inner {
     @include section-inner;
   }
-  &__best {
+  &__new {
     &-list {
-      @include flex(flex-start, center, 2.4rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4.8rem 2.4rem;
+
+      @media (max-width: $mb-lg) {
+        grid-template-columns: 1fr 1fr;
+      }
     }
     &-item {
-      flex-basis: 33.3%;
     }
     &-img {
       aspect-ratio: 1/1;
-      border: 0.1rem solid $border01;
+      background: $border01;
       border-radius: 1.6rem;
     }
     &-title {
@@ -29,6 +34,36 @@
     &-price {
       @include Comfortaa;
       font-size: 1.4rem;
+    }
+  }
+  &__best {
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.4rem;
+    }
+    &-img {
+      width: 40%;
+      aspect-ratio: 1/1;
+      background: $border01;
+      border-radius: 0.8rem;
+    }
+    &-item {
+      a {
+        @include flex(stretch, center, 2.4rem);
+      }
+    }
+
+    &-title {
+      @extend .Main__new-title;
+      margin-top: 0;
+    }
+    &-rank {
+      font-weight: 700;
+    }
+    &-price {
+      @extend .Main__new-price;
+      margin-top: 0.4rem;
     }
   }
 }

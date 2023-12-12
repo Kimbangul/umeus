@@ -75,3 +75,11 @@ button {
     display: block;
   }
 }
+.Contents {
+  @media (max-width: $pc-xs) {
+    padding-top: 7rem;
+  }
+  @media (max-width: $mb-lg) {
+    padding-top: 5rem;
+  }
+}
