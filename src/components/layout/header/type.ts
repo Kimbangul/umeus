@@ -3,6 +3,7 @@ export interface HeaderPropType {
   isFix: boolean;
   isOpen?: boolean;
   onClickMenu?: ()=>void;
+  onClickClose?: ()=>void;
 }
 export interface HeaderMenuPropType{
   menu: MenuType[];

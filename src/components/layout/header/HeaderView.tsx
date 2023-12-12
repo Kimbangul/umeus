@@ -1,7 +1,7 @@
 import { HeaderPropType } from "@/components/layout/header/type";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "@/components/common/Logo";
-import { faSearch, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faHeart, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import HeaderMenu from "@/components/layout/header/HeaderMenu";
@@ -43,7 +43,7 @@ const HeaderView : React.FC<HeaderPropType> = ({menu, isFix, isOpen, onClickMenu
       </div>
       <div className="Header__mb-menu" data-open={isOpen}>
         <div className="Header__mb-menu-inner">
-          <button className="Header__menu-btn--close" onClick={onClickClose}>X</button>
+          <button className="Header__menu-btn--close" onClick={onClickClose}><FontAwesomeIcon icon={faXmark}/></button>
         <nav className="Header__menu">
             <ul className="Header__menu-list">
             <HeaderMenu menu={menu}/>
