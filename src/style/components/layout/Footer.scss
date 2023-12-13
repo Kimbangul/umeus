@@ -6,7 +6,75 @@
     padding-bottom: 6rem;
   }
   &__logo {
-    @include flex(flex-start, center);
+    @include flex(space-between, center);
     filter: grayscale(1);
+  }
+  &__menu {
+    @include flex(flex-start, center, 1.6rem);
+
+    &-item {
+      @include flex;
+      gap: 1.6rem;
+      color: $third;
+      font-weight: 500;
+
+      &:last-child::after {
+        display: none;
+      }
+      &::after {
+        display: inline-block;
+        content: '|';
+        font-weight: 300;
+        opacity: 0.35;
+      }
+    }
+  }
+  &__info {
+    &-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 4rem;
+    }
+  }
+  &__title {
+    @include Comfortaa;
+    font-size: 2rem;
+    color: $second;
+    margin-bottom: 1.2rem;
+  }
+  &__list {
+  }
+  &__item {
+    @include flex(flex-start, center, 0.8rem);
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    color: $second;
+    &-cate {
+      font-weight: 500;
+    }
+  }
+  &__bank {
+    font-size: 1.4rem;
+    color: $second;
+  }
+
+  &__copy {
+    font-size: 1.4rem;
+    color: $third;
+    text-align: right;
+    opacity: 0.6;
+  }
+  &__sns {
+    li a {
+      font-size: 1.4rem;
+      transition: color 0.3s;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+  &__bottom {
+    margin-top: 8rem;
+    @include flex(space-between, center);
   }
 }
