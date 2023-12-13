@@ -5,4 +5,8 @@
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
+  &__logo {
+    @include flex(flex-start, center);
+    filter: grayscale(1);
+  }
 }

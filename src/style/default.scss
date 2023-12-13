@@ -34,7 +34,7 @@ body {
   min-width: 280px;
   color: $text05;
   font-size: 1.6rem;
-  @include Tmoney;
+  font-family: 'Pretendard', 'Malgun Gothic', 'sans-serif';
   position: relative;
   letter-spacing: -0.05rem;
 }
@@ -44,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  //  font-family: 'Noto Sans KR', 'Malgun Gothic', 'sans-serif';
+  font-family: 'Pretendard', 'Malgun Gothic', 'sans-serif';
 }
 a,
 img {
@@ -52,7 +52,7 @@ img {
 }
 
 button {
-  // font-family: 'Noto Sans KR', 'Malgun Gothic', 'sans-serif';
+  font-family: 'Pretendard', 'Malgun Gothic', 'sans-serif';
 }
 .sound-only {
   font-size: 0;

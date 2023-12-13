@@ -1,17 +1,17 @@
 @mixin Comfortaa {
-  font-family: 'Comfortaa', 'Noto Sans KR', sans-serif;
+  font-family: 'Comfortaa', 'Pretendard', sans-serif;
 }
 
 @mixin Tmoney {
-  font-family: 'TmoneyRoundWindExtraBold', 'Noto Sans KR', sans-serif;
+  font-family: 'TmoneyRoundWindExtraBold', 'Pretendard', sans-serif;
 }
 
-@mixin Noto {
-  font-family: 'Noto Sans KR', sans-serif;
+@mixin Pretendard {
+  font-family: 'Pretendard', sans-serif;
 }
 
 @mixin Nps {
-  font-family: 'NPSfontBold', 'Noto Sans KR', sans-serif;
+  font-family: 'NPSfontBold', 'Pretendard', sans-serif;
 }
 
 @mixin flex($jc: flex-start, $ai: stretch, $gap: 0, $dir: row) {
