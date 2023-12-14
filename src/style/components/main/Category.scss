@@ -50,19 +50,85 @@
     }
   }
   &__icon {
+    @include flex(center, center);
     max-width: 12rem;
     width: 100%;
     aspect-ratio: 1/1;
     background: $border01;
     border-radius: 1.6rem;
     margin: 0 auto;
+    font-size: 3.6rem;
+    transition: font-size 0.3s;
+
+    &.beige-1 {
+      background-color: #fff5e9;
+    }
+    &.beige-2 {
+      background-color: #ead9bb;
+    }
+    &.yellow-1 {
+      background-color: #f6e3ac;
+    }
+    &.yellow-2 {
+      background-color: #f4d091;
+    }
+    &.brown-1 {
+      background-color: #caa1a6;
+    }
+    &.brown-2 {
+      background-color: #c997a1;
+    }
+    &.blue-1 {
+      background-color: #d4e5f7;
+    }
+    &.blue-2 {
+      background-color: #bcdcf5;
+    }
+    &.blue-3 {
+      background-color: #85c9f0;
+    }
+    &.blue-4 {
+      background-color: #5fbfed;
+    }
+    &.green-1 {
+      background-color: #8acbc1;
+    }
+    &.green-2 {
+      background-color: #7cc5ad;
+    }
+    &.green-3 {
+      background-color: #5dae9c;
+    }
+    &.purple-1 {
+      background-color: #d4ddea;
+    }
+    &.purple-2 {
+      background-color: #bdcde3;
+    }
+    &.purple-3 {
+      background-color: #a6b4cf;
+    }
+    &.purple-4 {
+      background-color: #9473a6;
+    }
+    &.red-1 {
+      background-color: #f192b0;
+    }
+    &.red-2 {
+      background-color: #ef7a97;
+    }
+    &.red-3 {
+      background-color: #dd6b91;
+    }
 
     @media (max-width: $pc-xs) {
       max-width: 8rem;
+      font-size: 3.2rem;
     }
 
     @media (max-width: $mb-lg) {
       max-width: 6.4rem;
+      font-size: 2.4rem;
     }
   }
 }

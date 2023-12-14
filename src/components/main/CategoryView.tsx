@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 
 import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { CategoryType } from "@/components/main/type";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CategoryView :React.FC<CategoryType> = ({option,data}) => {
   return(
@@ -14,7 +15,9 @@ const CategoryView :React.FC<CategoryType> = ({option,data}) => {
             <SwiperSlide className="Category__slide"> 
             <div className="Category__item" key={`cate-${idx}`}>
               <a href={el.href}>
-                <div className="Category__icon"></div>
+                <div className="Category__icon">
+                  <FontAwesomeIcon icon={el.icon}/>
+                </div>
                 <h2>{el.title}</h2>
               </a>
             </div>

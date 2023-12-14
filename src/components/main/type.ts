@@ -1,3 +1,4 @@
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { SwiperProps } from "swiper/react";
 
 export interface SlideType {
@@ -10,6 +11,6 @@ export interface CategoryType extends SlideType {
 
 export interface CategoryDataType{
   title: string,
-  icon: string,
+  icon: IconDefinition,
   href: string
 }

@@ -2,17 +2,24 @@
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { SwiperProps } from "swiper/react";
 import CategoryView from "@/components/main/CategoryView";
+import { faGift, faKey, faMobileScreenButton, faRobot, faShapes, faShirt } from '@fortawesome/free-solid-svg-icons';
 
 
 const CategoryContainer = () => {
+  const colorData = [
+    'beige-1','beige-2', 'yellow-1','yellow-2','brown-1',
+    'brown-2','blue-1','blue-2','blue-3','blue-4','green-1',
+    'green-2','green-3','purple-1','purple-2','purple-3','purple-4',
+    'red-1','red-2','red-3'
+  ];
 
   const categoryData = [
-    {title: '신상품', icon:'', href:'#'},
-    {title: '인형/완구', icon:'', href:'#'},
-    {title: '핸드폰 악세사리', icon:'', href:'#'},
-    {title: '패션', icon:'', href:'#'},
-    {title: '키링', icon:'', href:'#'},
-    {title: '기타', icon:'', href:'#'},
+    {title: '신상품', icon:faGift, href:'#'},
+    {title: '인형/완구', icon:faRobot, href:'#'},
+    {title: '핸드폰 악세사리', icon:faMobileScreenButton, href:'#'},
+    {title: '패션', icon:faShirt, href:'#'},
+    {title: '키링', icon:faKey, href:'#'},
+    {title: '기타', icon:faShapes, href:'#'},
   ];
 
   const option :  SwiperProps  = {
