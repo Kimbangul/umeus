@@ -1,4 +1,5 @@
 import Slide from "@/components/main/SlideContainer";
+import Category from "@/components/main/CategoryContainer";
 
 export default function Home() {
   const categoryData = [
@@ -22,18 +23,7 @@ export default function Home() {
     <>
     <Slide/>
     <nav className="Main__cate">
-      <ul className="Main__cate-list">
-        {
-          categoryData.map((el,idx)=>
-            <li className="Main__cate-item" key={`cate-${idx}`}>
-              <a href={el.href}>
-                <div className="Main__cate-icon"></div>
-                <h2>{el.title}</h2>
-              </a>
-            </li>
-          )
-        }
-      </ul>
+      <Category />
     </nav>
     <section className="Main__section">
       <div className="Main__inner">
