@@ -7,10 +7,23 @@
   }
   &__logo {
     @include flex(space-between, center);
-    filter: grayscale(1);
+    a {
+      display: inline-block;
+    }
+    img {
+      filter: grayscale(1);
+    }
+
+    @media (max-width: $mb-lg) {
+      display: block;
+    }
   }
   &__menu {
     @include flex(flex-start, center, 1.6rem);
+
+    @media (max-width: $mb-lg) {
+      margin-top: 0.8rem;
+    }
 
     &-item {
       @include flex;
@@ -33,7 +46,16 @@
     &-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      gap: 4.8rem;
       margin-top: 4rem;
+
+      @media (max-width: $pc-xs) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: $mb-lg) {
+        grid-template-columns: 1fr;
+      }
     }
   }
   &__title {
@@ -63,6 +85,11 @@
     color: $third;
     text-align: right;
     opacity: 0.6;
+
+    @media (max-width: $mb-lg) {
+      text-align: left;
+      margin-top: 1.6rem;
+    }
   }
   &__sns {
     li a {
@@ -76,5 +103,9 @@
   &__bottom {
     margin-top: 8rem;
     @include flex(space-between, center);
+
+    @media (max-width: $mb-lg) {
+      display: block;
+    }
   }
 }
