@@ -28,6 +28,10 @@
     border-radius: 1.6rem;
     margin: 0 auto;
 
+    @media (max-width: $pc-xs) {
+      max-width: 8rem;
+    }
+
     @media (max-width: $mb-lg) {
       max-width: 6.4rem;
     }

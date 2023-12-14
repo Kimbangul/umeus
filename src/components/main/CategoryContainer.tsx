@@ -18,12 +18,23 @@ const CategoryContainer = () => {
   const option :  SwiperProps  = {
     className: "Category__container",
     modules:[Autoplay, Pagination, Navigation, EffectFade],
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 0,
     loop: false,
     speed: 1200,
     pagination: {
-      clickable: true
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      },
+    },
+    breakpoints:{
+      641: {
+        slidesPerView: 5,
+      },
+      361: {
+        slidesPerView: 4,
+      }
     }
   }
   
