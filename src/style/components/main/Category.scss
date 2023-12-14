@@ -5,6 +5,35 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 3.2rem;
+
+    .swiper-pagination {
+      position: static;
+      margin-top: 3.2rem;
+      @media (max-width: $mb-lg) {
+        display: none;
+      }
+    }
+    .swiper-pagination-bullet {
+      @include Comfortaa;
+      width: 4rem;
+      height: 4rem;
+      border: 0.1rem solid $border01;
+      text-align: center;
+      line-height: 4rem;
+      font-size: 1.4rem;
+      color: $third;
+      opacity: 1;
+      background: transparent;
+      transition: color 0.3s, border-color 0.3s;
+      margin: 0 0.6rem !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      color: $main;
+      font-weight: 600;
+      background: transparent;
+      border-color: $main;
+    }
   }
   &__item {
     @include flex(stretch, center, 0, column);

@@ -27,13 +27,14 @@ const CategoryContainer = () => {
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       },
-    },
+    },    
     breakpoints:{
       641: {
-        slidesPerView: 5,
+        slidesPerView: 5,          
       },
       361: {
         slidesPerView: 4,
+        
       }
     }
   }
