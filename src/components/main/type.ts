@@ -6,7 +6,8 @@ export interface SlideType {
 }
 
 export interface CategoryType extends SlideType {
-  data: CategoryDataType[]
+  data: CategoryDataType[],
+  getRandomColor: ()=>string
 }
 
 export interface CategoryDataType{

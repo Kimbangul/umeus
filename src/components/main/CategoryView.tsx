@@ -6,7 +6,7 @@ import { Swiper, SwiperProps, SwiperSlide } from "swiper/react";
 import { CategoryType } from "@/components/main/type";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CategoryView :React.FC<CategoryType> = ({option,data}) => {
+const CategoryView :React.FC<CategoryType> = ({option,data, getRandomColor}) => {
   return(
     <section className="Category__list">
         <Swiper {...option}>
@@ -15,7 +15,7 @@ const CategoryView :React.FC<CategoryType> = ({option,data}) => {
             <SwiperSlide className="Category__slide"> 
             <div className="Category__item" key={`cate-${idx}`}>
               <a href={el.href}>
-                <div className="Category__icon">
+                <div className={`Category__icon ${getRandomColor()}`}>
                   <FontAwesomeIcon icon={el.icon}/>
                 </div>
                 <h2>{el.title}</h2>

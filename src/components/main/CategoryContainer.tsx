@@ -6,12 +6,24 @@ import { faGift, faKey, faMobileScreenButton, faRobot, faShapes, faShirt } from 
 
 
 const CategoryContainer = () => {
-  const colorData = [
-    'beige-1','beige-2', 'yellow-1','yellow-2','brown-1',
-    'brown-2','blue-1','blue-2','blue-3','blue-4','green-1',
-    'green-2','green-3','purple-1','purple-2','purple-3','purple-4',
-    'red-1','red-2','red-3'
-  ];
+  // const colorData = [
+  //   'beige-1','beige-2', 'yellow-1','yellow-2','brown-1',
+  //   'brown-2','blue-1','blue-2','blue-3','blue-4','green-1',
+  //   'green-2','green-3','purple-1','purple-2','purple-3','purple-4',
+  //   'red-1','red-2','red-3'
+  // ];
+  let colorData = [
+    'beige-1', 'yellow-1','brown-1', 'blue-1','green-1','purple-1', 'red-1'];
+
+  // FUNCTION 색상 데이터 랜덤 생성
+  const getRandomColor = () => {
+    const random =  Math.floor(Math.random() * colorData.length);
+    console.log(colorData[random]);
+    const pick = colorData[random];
+    colorData = colorData.filter(el => el!==pick);
+    console.log(colorData);
+    return  pick;
+  }
 
   const categoryData = [
     {title: '신상품', icon:faGift, href:'#'},
@@ -46,7 +58,7 @@ const CategoryContainer = () => {
     }
   }
   
-  return <CategoryView option={option} data={categoryData}/>
+  return <CategoryView option={option} data={categoryData} getRandomColor={getRandomColor}/>
 }
 
 export default CategoryContainer;

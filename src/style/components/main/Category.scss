@@ -60,26 +60,34 @@
     font-size: 3.6rem;
     transition: font-size 0.3s;
 
+    svg {
+      filter: brightness(0.7);
+    }
+
     &.beige-1 {
       background-color: #fff5e9;
+      color: #ead9bb;
     }
     &.beige-2 {
       background-color: #ead9bb;
     }
     &.yellow-1 {
       background-color: #f6e3ac;
+      color: #f4d091;
     }
     &.yellow-2 {
       background-color: #f4d091;
     }
     &.brown-1 {
       background-color: #caa1a6;
+      color: #c997a1;
     }
     &.brown-2 {
       background-color: #c997a1;
     }
     &.blue-1 {
       background-color: #d4e5f7;
+      color: #85c9f0;
     }
     &.blue-2 {
       background-color: #bcdcf5;
@@ -92,6 +100,7 @@
     }
     &.green-1 {
       background-color: #8acbc1;
+      color: #5dae9c;
     }
     &.green-2 {
       background-color: #7cc5ad;
@@ -101,6 +110,7 @@
     }
     &.purple-1 {
       background-color: #d4ddea;
+      color: #a6b4cf;
     }
     &.purple-2 {
       background-color: #bdcde3;
@@ -113,6 +123,7 @@
     }
     &.red-1 {
       background-color: #f192b0;
+      color: #dd6b91;
     }
     &.red-2 {
       background-color: #ef7a97;
