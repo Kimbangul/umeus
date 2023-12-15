@@ -12,14 +12,36 @@ const HeaderContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const size = useResize();
 
+  // FUNCTION 스크롤 80 이상 헤더 고정
   useEffect(()=>{
     if (scroll.scroll >= 80){
       setIsFix(true);
     } else{
-      console.log(scroll.scroll);
       setIsFix(false);
     }    
-  },[scroll.scroll])
+  },[scroll.scroll]);
+
+  // FUNCTION 981px 이상일 때 모바일 메뉴 자동 닫기
+  useEffect(()=>{
+    if (!size.width) return;
+
+    if(size.width > 980){
+      setCloseMenu();
+    }    
+  },[size.width]);
+
+  // FUNCTION 모바일 메뉴 열기 / 닫기
+  const setOpenMenu = () => {
+    setIsOpen(true);
+    document.body.style.height = '100vh';
+    document.body.style.overflow = 'hidden';
+  } 
+
+  const setCloseMenu = () => {
+    setIsOpen(false);
+    document.body.style.height = 'auto';
+    document.body.style.overflow = 'unset';
+  }
 
   const menu : MenuType[] = [
     {link: '#', title: 'ABOUT'},
@@ -31,7 +53,7 @@ const HeaderContainer = () => {
   ];
 
   return(
-    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen} onClickMenu={()=>setIsOpen(true)} onClickClose={()=>setIsOpen(false)}/>
+    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen} onClickMenu={setOpenMenu} onClickClose={setCloseMenu}/>
   )
 }
 
