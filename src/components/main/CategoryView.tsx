@@ -12,8 +12,8 @@ const CategoryView :React.FC<CategoryType> = ({option,data, getRandomColor}) => 
         <Swiper {...option}>
           {
             data.map((el,idx) => 
-            <SwiperSlide className="Category__slide"> 
-            <div className="Category__item" key={`cate-${idx}`}>
+            <SwiperSlide className="Category__slide" key={`cate-${idx}`}> 
+            <div className="Category__item" >
               <a href={el.href}>
                 <div className={`Category__icon ${getRandomColor()}`}>
                   <FontAwesomeIcon icon={el.icon}/>

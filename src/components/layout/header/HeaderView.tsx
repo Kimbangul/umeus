@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import HeaderMenu from "@/components/layout/header/HeaderMenu";
 
 
-const HeaderView : React.FC<HeaderPropType> = ({menu, isFix, isOpen, onClickMenu, onClickClose}) => {
+const HeaderView : React.FC<HeaderPropType> = ({menu, isFix, isOpen, onClickMenu, onClickClose, onClickBg}) => {
   return(
     <header className="Header" data-fix={isFix}>
       <h1 className="sound-only">해피윰스데이</h1>  
@@ -41,7 +41,7 @@ const HeaderView : React.FC<HeaderPropType> = ({menu, isFix, isOpen, onClickMenu
         <FontAwesomeIcon icon={faBars}/>
        </button>
       </div>
-      <div className="Header__mb-menu" data-open={isOpen}>
+      <div className="Header__mb-menu" data-open={isOpen} onClick={onClickBg}>
         <div className="Header__mb-menu-inner">
           <button className="Header__menu-btn--close" onClick={onClickClose}><FontAwesomeIcon icon={faXmark}/></button>
         <nav className="Header__menu">

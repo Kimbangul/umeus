@@ -18,7 +18,7 @@ const CategoryContainer = () => {
   // FUNCTION 색상 데이터 랜덤 생성
   const getRandomColor = () => {
     const random =  Math.floor(Math.random() * colorData.length);
-    console.log(colorData[random]);
+    // console.log(colorData[random]);
     const pick = colorData[random];
     colorData = colorData.filter(el => el!==pick);
     console.log(colorData);

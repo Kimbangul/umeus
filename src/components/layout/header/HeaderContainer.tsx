@@ -43,6 +43,13 @@ const HeaderContainer = () => {
     document.body.style.overflow = 'unset';
   }
 
+  // FUNCTION 모바일 메뉴 바깥쪽 배경 클릭 시 닫기
+  const onClickBg = (e : React.MouseEvent) =>  {
+    if (e.target === e.currentTarget){
+      setCloseMenu();
+    }
+  }
+
   const menu : MenuType[] = [
     {link: '#', title: 'ABOUT'},
     {link: '#', title: 'NEW'},
@@ -53,7 +60,14 @@ const HeaderContainer = () => {
   ];
 
   return(
-    <HeaderView menu={menu} isFix={isFix} isOpen={isOpen} onClickMenu={setOpenMenu} onClickClose={setCloseMenu}/>
+    <HeaderView 
+    menu={menu} 
+    isFix={isFix} 
+    isOpen={isOpen} 
+    onClickMenu={setOpenMenu} 
+    onClickClose={setCloseMenu}
+    onClickBg={onClickBg}
+    />
   )
 }
 

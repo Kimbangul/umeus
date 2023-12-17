@@ -4,6 +4,7 @@ export interface HeaderPropType {
   isOpen?: boolean;
   onClickMenu?: ()=>void;
   onClickClose?: ()=>void;
+  onClickBg?: (e : React.MouseEvent)=>void,
 }
 export interface HeaderMenuPropType{
   menu: MenuType[];
