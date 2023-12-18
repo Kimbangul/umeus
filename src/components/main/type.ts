@@ -5,7 +5,13 @@ export interface SlideType {
   option: SwiperProps
 }
 
+export interface BannerDataType {
+  href: string,
+  title: string,
+  color?: string
+}
 export interface BannerType extends SlideType {
+  data: BannerDataType[]
 }
 
 export interface CategoryType extends SlideType {

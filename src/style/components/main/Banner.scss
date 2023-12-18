@@ -1,0 +1,47 @@
+.Banner {
+  //height: 10rem;
+  height: 20rem;
+  .swiper {
+    &-pagination {
+      @include flex(center, center);
+      top: unset !important;
+      bottom: 1.2rem !important;
+      &-bullet {
+        width: 0.8rem;
+        height: 0.8rem;
+        transition: background 0.3s;
+        background: rgba(255, 255, 255, 0.6);
+        margin: 0 0.3rem !important;
+        opacity: 1;
+        &-active {
+          background: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+
+  &__container {
+    height: 100%;
+  }
+  &__slide {
+    width: 100%;
+    height: 100% !important;
+    background: $border01;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__inner {
+    @include flex(space-between, center);
+    @include section-inner;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+  }
+  &__title {
+    color: $white;
+    font-size: 2.8rem;
+    font-weight: 800;
+  }
+}
