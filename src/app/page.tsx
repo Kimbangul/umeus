@@ -64,6 +64,25 @@ export default function Home() {
             </ul>
           </div>
     </section>
+    <section className="Main__section">
+              <div className="Main__inner">
+                <div className="Main__pick-bg"></div>
+               <h2 className="Main__title">Editor's PICK</h2>
+               <ul className="Main__pick-list">
+               {
+                  newItemData.map((el, idx) => 
+                    <li className="Main__pick-item" key={`pick-item${idx}`}>
+                      <a href={el.href}>
+                        <div className="Main__pick-img"></div>
+                        <div className="Main__pick-title">{el.title}</div>
+                        <div className="Main__pick-price">{el.price.toLocaleString('ko-KR')}원</div>
+                      </a>
+                    </li>
+                    )
+                } 
+               </ul>
+              </div>
+    </section>
     </>
   )
 }
