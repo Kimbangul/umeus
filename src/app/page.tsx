@@ -1,5 +1,6 @@
 import Slide from "@/components/main/SlideContainer";
 import Category from "@/components/main/CategoryContainer";
+import Section from "@/components/layout/section/SectionView";
 
 export default function Home() {
   const categoryData = [
@@ -25,27 +26,22 @@ export default function Home() {
     <nav className="Main__cate">
       <Category />
     </nav>
-    <section className="Main__section">
-      <div className="Main__inner">
-        <h2 className="Main__title">NEW ITEM</h2>
-        <ul className="Main__new-list">
-          {
-            newItemData.map((el, idx) => 
-              <li className="Main__new-item" key={`item${idx}`}>
-                 <a href={el.href}>
-                  <div className="Main__new-img"></div>
-                  <div className="Main__new-title">{el.title}</div>
-                  <div className="Main__new-price">{el.price.toLocaleString('ko-KR')}원</div>
-                </a>
-              </li>
-              )
-          }          
-        </ul>
-      </div>
-    </section>
-    <section className="Main__section">
-          <div className="Main__inner">
-            <h2 className="Main__title">BEST ITEM</h2>
+    <Section title='NEW ITEM'>
+      <ul className="Main__new-list">
+            {
+              newItemData.map((el, idx) => 
+                <li className="Main__new-item" key={`item${idx}`}>
+                  <a href={el.href}>
+                    <div className="Main__new-img"></div>
+                    <div className="Main__new-title">{el.title}</div>
+                    <div className="Main__new-price">{el.price.toLocaleString('ko-KR')}원</div>
+                  </a>
+                </li>
+                )
+            }          
+          </ul>
+    </Section>
+    <Section title='BEST ITEM'>
             <ul className="Main__best-list">
               {
                    bestItemData.map((el, idx) => 
@@ -62,12 +58,10 @@ export default function Home() {
                    )
               }           
             </ul>
-          </div>
-    </section>
-    <section className="Main__section">
-              <div className="Main__inner">
-                <div className="Main__pick-bg"></div>
-               <h2 className="Main__title">Editor's PICK</h2>
+    </Section>
+    <Section>
+    <div className="Main__pick-bg"></div>
+               <h2 className="Section__title">Editor's PICK</h2>
                <ul className="Main__pick-list">
                {
                   newItemData.map((el, idx) => 
@@ -81,8 +75,7 @@ export default function Home() {
                     )
                 } 
                </ul>
-              </div>
-    </section>
+     </Section>
     </>
   )
 }

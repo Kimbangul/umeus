@@ -1,0 +1,11 @@
+.Section {
+  @include section;
+
+  &__title {
+    @include section-title;
+  }
+  &__inner {
+    @include section-inner;
+    position: relative;
+  }
+}
