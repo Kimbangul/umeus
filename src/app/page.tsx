@@ -60,7 +60,7 @@ export default function Home() {
             </ul>
     </Section>
     <Section>
-    <div className="Main__pick-bg"></div>
+           <div className="Main__pick-bg"></div>
                <h2 className="Section__title">Editor's PICK</h2>
                <ul className="Main__pick-list">
                {

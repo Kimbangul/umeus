@@ -5,6 +5,9 @@ export interface SlideType {
   option: SwiperProps
 }
 
+export interface BannerType extends SlideType {
+}
+
 export interface CategoryType extends SlideType {
   data: CategoryDataType[],
   getRandomColor: ()=>string
