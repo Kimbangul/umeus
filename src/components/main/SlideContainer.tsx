@@ -22,6 +22,7 @@ const SlideContainer = () => {
       crossFade: true,
 
     },
+    navigation:true,
     speed: 1200,
     pagination: {
       clickable: true
