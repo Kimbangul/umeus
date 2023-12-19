@@ -2,6 +2,7 @@ import Slide from "@/components/main/SlideContainer";
 import Category from "@/components/main/CategoryContainer";
 import Section from "@/components/layout/section/SectionView";
 import Banner from "@/components/main/BannerContainer";
+import Insta from "@/components/main/InstaContainer";
 
 export default function Home() {
   const categoryData = [
@@ -78,6 +79,9 @@ export default function Home() {
                </ul>
      </Section>
      <Banner />
+     <Section title='Instagram'>
+        <Insta />
+      </Section>
     </>
   )
 }
