@@ -1,14 +1,18 @@
 .Banner {
   //height: 10rem;
   height: 20rem;
+  transition: height 0.3s;
+  @media (max-width: $mb-md) {
+    height: 10rem;
+  }
   .swiper {
     &-pagination {
       @include flex(center, center);
       top: unset !important;
       bottom: 1.2rem !important;
       &-bullet {
-        width: 0.8rem;
-        height: 0.8rem;
+        width: 0.6rem;
+        height: 0.6rem;
         transition: background 0.3s;
         background: rgba(255, 255, 255, 0.6);
         margin: 0 0.3rem !important;
@@ -43,5 +47,11 @@
     color: $white;
     font-size: 2.8rem;
     font-weight: 800;
+    transition: font-size 0.3s;
+    white-space: pre-wrap;
+    padding-bottom: 0.6rem;
+    @media (max-width: $mb-md) {
+      font-size: 2rem;
+    }
   }
 }

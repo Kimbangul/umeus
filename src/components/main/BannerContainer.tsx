@@ -8,7 +8,7 @@ const BannerContainer = () => {
 
   const data = [
     {href:'#', title:'배너 타이틀이에요', color: '#5dae9c'},
-    {href:'#', title:'배너 타이틀이에요', color: '#9473a6'},
+    {href:'#', title:'배너\n타이틀이에요', color: '#9473a6'},
     {href:'#', title:'배너 타이틀이에요', color: '#c997a1'}
   ]
   const option :  SwiperProps  = {
