@@ -5,7 +5,7 @@ export async function GET(req: Request, res: Response) {
   console.log(req);
   // res.status(200).json({data:'test'});
 
-  return new Response(JSON.stringify({ status: 200, data: 'test' }), {
+  return new Response(JSON.stringify({ status: 200, data: 'test2' }), {
     status: 200,
   });
 
