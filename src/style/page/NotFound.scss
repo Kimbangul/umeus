@@ -1,2 +1,16 @@
 .NotFound {
+  &__img {
+    margin: 0 auto;
+    width: 30rem;
+    aspect-ratio: 1/0.8;
+    background: $bg01;
+    border-radius: 1.6rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: $second;
+    margin-top: 3.2rem;
+    text-align: center;
+  }
 }
