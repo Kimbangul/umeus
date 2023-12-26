@@ -1,6 +1,10 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Section from "@/components/layout/section/SectionView";
 
 export default function Custom404() {
+  const router = useRouter();
 
   return (
   <Section>
@@ -11,7 +15,7 @@ export default function Custom404() {
       존재하지 않는 주소이거나 페이지가 삭제되었을 수 있습니다.
     </p>
     <div className="NotFound__btn-container">
-      <a href='#' className="NotFound__btn">이전으로</a> 
+      <button className="NotFound__btn" onClick={()=>router.back()}>이전으로</button> 
     </div>
   </Section>
   )
