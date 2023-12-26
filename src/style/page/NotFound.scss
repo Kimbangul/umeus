@@ -6,11 +6,29 @@
     background: $bg01;
     border-radius: 1.6rem;
   }
+  &__title {
+    @include Comfortaa;
+    font-size: 2.4rem;
+    color: $second;
+    text-align: center;
+    margin-top: 3.2rem;
+  }
   &__desc {
+    margin-top: 3.2rem;
     font-size: 1.8rem;
     line-height: 1.6;
-    color: $second;
-    margin-top: 3.2rem;
+    color: $third;
+    margin-top: 2.4rem;
+    text-align: center;
+  }
+  &__btn {
+    font-size: 1.8rem;
+    display: inline-block;
+    cursor: pointer;
+    min-width: 16rem;
+    padding: 1.2rem 1.6rem;
+    margin-top: 2.4rem;
+    background: $main;
     text-align: center;
   }
 }
