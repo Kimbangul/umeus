@@ -55,5 +55,12 @@
 
 @mixin button {
   font-size: 1.8rem;
-  
+  display: inline-block;
+  cursor: pointer;
+  min-width: 16rem;
+  padding: 1.2rem 1.6rem;
+  background: $main;
+  text-align: center;
+  color: $text04;
+  border-radius: 0.8rem;
 }
