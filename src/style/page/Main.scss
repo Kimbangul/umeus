@@ -72,6 +72,7 @@
     }
   }
   &__pick {
+    position: relative;
     &-bg {
       position: absolute;
       width: 100%;
@@ -97,6 +98,9 @@
     }
     &-price {
       @extend .Main__new-price;
+    }
+    &__inner {
+      position: static;
     }
   }
 }
